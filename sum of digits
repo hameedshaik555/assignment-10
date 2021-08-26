@@ -1,0 +1,33 @@
+
+#include <stdio.h>
+   addfun(int n)
+ {
+     if(n)
+     {
+         return((n%10)+addfun(n/10));// n=12345%10 +12345/10
+                                     //n=5+1234   n=15
+                                      // n=4+123   n=10
+                                      // n=3+12    n=6
+                                      // n=2+1     n=3
+                                      // n=1+0     n=1
+         
+     }
+     else
+     {
+         return 0;
+     }
+ }
+ 
+ 
+ 
+ 
+ 
+int main()
+{
+    int n; int result;
+    printf("enter a number" );
+    scanf("%d",&n);
+   result= addfun(n);
+   printf("%d",result);
+    
+}
